@@ -1,0 +1,42 @@
+1.	a)
+		1 - Looking up informatino relevant to the course online.
+		3 - Talking to my classmates about general approaches about the problems (but no specific coding statements or description of your own code or someone else's code)
+		5 - Asking the course staff for help
+	b)
+		1 - Email the professor immediately
+		2 - Complete the regrade request form within 1 week of receiving the grade and wait for an issue to be posted to your Github repo
+		3 - Visit the designated regrade TA within 1 week of your score posting
+	c)
+		3 - Each student has 4 late days of which only 1 can be used per HW
+	d)
+		2 - Clone your repo to a temporary folder to ensure all the files you desire are pushed and that your code compiles
+		3 - Complete the online submission page using your FULL (30 or more digit) SHA
+	e)
+		1 - None. We will not accept your submission
+	f)
+		1 - TRUE
+		2 - FALSE
+		3 - TRUE
+		
+2.	a)
+		1 - Cloning into a folder that itself is a git repo
+	b)
+		1 - git add hw1q2b.cpp
+		2 - git log
+	c)
+		git clone git@github.com:usc-csci104-summer2019/hw-nneven.git
+		
+7.	a)
+		Str
+		Str
+		Entry
+	b)
+		Copy Str
+		Copy Str
+		Entry
+	c)
+		// initialize e_ with name and phone
+		Wrapper::Wrapper(const Str& name, const Str& phone) : e_(name, phone)	
+		{
+			
+		}

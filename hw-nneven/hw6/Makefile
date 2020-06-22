@@ -1,0 +1,34 @@
+all: twitter sentences sat_solver
+
+sentences: sentences.cpp
+	g++ -g -Wall -std=c++11 sentences.cpp -o sentences
+
+sat_solver: sat_solver.cpp
+	g++ -g -Wall -std=c++11 sat_solver.cpp -o sat_solver
+
+twitter: twitter.cpp twiteng.o tweet.o user.o datetime.o util.o cmdhandler.o handler.o
+	g++ -g -Wall -std=c++11 twitter.cpp twiteng.o tweet.o user.o datetime.o util.o cmdhandler.o handler.o -o twitter
+
+twiteng.o: twiteng.h twiteng.cpp
+	g++ -g -Wall -c -std=c++11 twiteng.cpp -o twiteng.o
+
+tweet.o: tweet.h tweet.cpp
+	g++ -g -Wall -c -std=c++11 tweet.cpp -o tweet.o
+
+user.o: user.h user.cpp
+	g++ -g -Wall -c -std=c++11 user.cpp -o user.o
+
+datetime.o: datetime.h datetime.cpp
+	g++ -g -Wall -c -std=c++11 datetime.cpp -o datetime.o
+
+util.o: util.h util.cpp
+	g++ -g -Wall -c -std=c++11 util.cpp -o util.o
+
+cmdhandler.o: cmdhandler.h cmdhandler.cpp
+	g++ -g -Wall -c -std=c++11 cmdhandler.cpp -o cmdhandler.o
+
+handler.o: handler.h handler.cpp
+	g++ -g -Wall -c -std=c++11 handler.cpp -o handler.o
+
+clean:
+	rm -f *.o *.out *.feed *.mentions

@@ -1,0 +1,36 @@
+1)	a)	README.md - unmodified
+	
+	b)	README.md - modified
+		fun_problem.txt - untracked
+
+	c)	README.md - staged
+		fun_problem.txt - staged
+
+	d)	README.md - modified
+		fun_problem.txt - modified
+
+	e)	README.md - staged
+		fun_problem.txt - unmodified
+		"" (no contents in fun_problem.txt) because we made modifications to the file using echo, but then by using checkout we updated the filed in the working directory to match the version stored in that branch.
+
+	f)	README.md - modified
+		This status was reached because originally our file was staged after we called "git add README.md" but by making modifications to the file with echo we change the status to modified. There is also an unedited version of README.md which has the unchanged status of staged.
+
+2)	a)	Every action line in a makefile must start with a TAB
+	
+	b)	make clean - both destructors for shape1 and shape2 get called
+		make shape1 - both shape.o and shape1.o get compiled
+
+	c)	The purpose of a .PHONY rule is to say that the target is not a file
+
+	d)	Makefile and makefile are both acceptable names
+
+3)	a)	List of college names(strings). We can use a list because we do not need to store the year they won. Instead we can use an ordered list to store the NCAA champion for each year, allowing for duplicates.
+
+	b)	Set of social security numbers(strings/ints). We use a set because order does not matter, there should be no duplicates, and we want effecient lookups. The SSN can be stored as either a string or int.
+
+	c)	Map of contact names(keys - string) to a their phone numbers(value - map) of phone number type(keys - string) to the number(values - string). I chose to implement everything using strings to help prevent confusion, but the actual phone numbers could be stored as integers. This allows someone to look up the persons name from the original map, which will then return a second map as the value to the look up phone number types, which finally returns the number themselves.
+
+	d) Map of states(key - string) to a set of zip codes(value - set(string)). We use a map to first search up which particular state we need information on, then get returned a set full of zip codes for that state. We use a set because order does not matter, there should be no duplicate zip codes, and we want fast lookups. The zip codes could be stored as either ints or strings, but I chose strings for simplicity.
+
+	e) Map of student names(keys - string) to a list of donut choices(string). Each list would be of size 12, allowing for duplicate donuts, although order does not matter. Alternatively one could do a map of student names to a map of donuts that have integers as values to determine how many per type of donut per student, but it seems easier to implement my first suggestion.
